@@ -1,6 +1,6 @@
-package inherit.matrix;
+package org.suai.lab3.matrix;
 
-import inherit.exceptions.*;
+import org.suai.lab3.exceptions.*;
 import java.util.Arrays;
 
 
@@ -19,6 +19,13 @@ public class Matrix {
         data = new int[rows][cols];
     }
 
+    public void fillMatrix(int val) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                data[i][j] = val;
+            }
+        }
+    }
 
     public int getRows() { return rows; }
     public int getCols() { return cols; }

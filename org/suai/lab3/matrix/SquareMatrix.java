@@ -1,4 +1,4 @@
-package inherit.matrix;
+package org.suai.lab3.matrix;
 
 
 public class SquareMatrix extends Matrix {

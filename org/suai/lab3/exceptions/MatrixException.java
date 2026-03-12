@@ -1,7 +1,7 @@
-package inherit.exceptions;
+package org.suai.lab3.exceptions;
 
 public class MatrixException extends RuntimeException {
     public MatrixException(String message) {
-        super(message);
+        super("MatrixException: " + message);
     }
 }

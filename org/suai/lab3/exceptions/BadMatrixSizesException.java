@@ -1,7 +1,7 @@
-package inherit.exceptions;
+package org.suai.lab3.exceptions;
 
 public class BadMatrixSizesException extends MatrixException {
     public BadMatrixSizesException(String message) {
-        super(message);
+        super("BadSize: " + message);
     }
 }
