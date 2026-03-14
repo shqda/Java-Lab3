@@ -16,12 +16,12 @@ public class Matrix {
 
         rows = r;
         cols = c;
-        data = new int[getRows()][getCols()];
+        data = new int[rows][cols];
     }
 
     public void fillMatrix(int val) {
-        for (int i = 0; i < getRows(); i++) {
-            for (int j = 0; j < getCols(); j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 setElement(i, j, val);
             }
         }

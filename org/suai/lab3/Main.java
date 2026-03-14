@@ -30,6 +30,7 @@ public class Main {
         } catch (MatrixException e) {
             System.out.println(e.getMessage());
         }
+
     }
 
 }

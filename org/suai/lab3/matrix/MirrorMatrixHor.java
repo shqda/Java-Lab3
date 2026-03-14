@@ -25,30 +25,10 @@ public class MirrorMatrixHor extends Matrix {
     public void setElement(int row, int column, int value) throws BadMatrixSizesException {
         checkBounds(row, column);
         data[mapRow(row)][column] = value;
-        data[row][column] = value;
-    }
-
-    public String convertToString() {
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < getRows() / 2; i++) {
-            sb.append("[ ");
-            for (int j = 0; j < getCols(); j++) {
-                sb.append(data[i][j]).append(" ");
-            }
-            sb.append("]\n");
-        }
-        for (int i = getRows() / 2; i < getRows(); i++) {
-            sb.append("[ ");
-            for (int j = 0; j < getCols(); j++) {
-                sb.append(data[mapRow(i)][j]).append(" ");
-            }
-            sb.append("]\n");
-        }
-        return sb.toString();
     }
 
     private int mapRow(int row) {
+        if (row < rows) return row;
         return getRows() - 1 - row;
     }
 
